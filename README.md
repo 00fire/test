@@ -1,1 +1,1 @@
-# yungmagnus.github.io
+# 00fire.github.io
