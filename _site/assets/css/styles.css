@@ -1,0 +1,387 @@
+html {
+  font-family: 'Roboto', sans-serif; }
+
+.current {
+  color: green; }
+
+header {
+  grid-area: header; }
+
+main {
+  grid-area: main; }
+
+aside {
+  grid-area: aside; }
+
+footer {
+  grid-area: footer; }
+
+body {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-areas: "header header" "main aside" "footer footer"; }
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden; }
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px; }
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black; }
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white; }
+
+.master {
+  background: url(../images/pacman.png);
+  background-size: cover; }
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {
+    width: 8.33%; }
+
+  .col-s-2 {
+    width: 16.66%; }
+
+  .col-s-3 {
+    width: 25%; }
+
+  .col-s-4 {
+    width: 33.33%; }
+
+  .col-s-5 {
+    width: 41.66%; }
+
+  .col-s-6 {
+    width: 50%; }
+
+  .col-s-7 {
+    width: 58.33%; }
+
+  .col-s-8 {
+    width: 66.66%; }
+
+  .col-s-9 {
+    width: 75%; }
+
+  .col-s-10 {
+    width: 83.33%; }
+
+  .col-s-11 {
+    width: 91.66%; }
+
+  .col-s-12 {
+    width: 100%; } }
+#myBtn {
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: green;
+  /* Set a background color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 15px;
+  /* Some padding */
+  border-radius: 10px;
+  /* Rounded corners */
+  font-size: 18px;
+  /* Increase font size */ }
+
+#myBtn:hover {
+  background-color: darkolivegreen;
+  /* Add a dark-grey background on hover */ }
+
+.sidenav {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  right: 0;
+  background-color: #111;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */ }
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s; }
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: red; }
+
+.sidenav a.active {
+  background-color: #4CAF50;
+  color: white; }
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  font-size: 36px;
+  margin-left: 50px; }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px; }
+
+  .sidenav a {
+    font-size: 18px; } }
+.cooldude {
+  position: absolute;
+  /* Fixed/sticky position */
+  top: 8px;
+  /* Place the button at the bottom of the page */
+  right: 8px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: grey;
+  /* Set a background color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 15px;
+  /* Some padding */
+  font-size: 12x;
+  /* Increase font size */ }
+
+.song {
+  background-size: 40px 40px; }
+
+.container {
+  position: absolute;
+  top: 25%;
+  left: 90%;
+  margin-left: -64.5px;
+  margin-top: -85.5px; }
+
+.ghost {
+  animation: float 3s ease-out infinite; }
+
+@keyframes float {
+  50% {
+    transform: translate(0, 20px); } }
+.shadowFrame {
+  width: 130px;
+  margin-top: 15px; }
+
+.shadow {
+  animation: shrink 3s ease-out infinite;
+  transform-origin: center center; }
+  .shadow ellipse {
+    transform-origin: center center; }
+
+@keyframes shrink {
+  0% {
+    width: 90%;
+    margin: 0 5%; }
+  50% {
+    width: 60%;
+    margin: 0 18%; }
+  100% {
+    width: 90%;
+    margin: 0 5%; } }
+#main {
+  width: 100%; }
+
+#Mouth1 {
+  transform-origin: top left;
+  animation: lower-jaw .25s linear infinite alternate; }
+
+#Mouth2 {
+  transform-origin: bottom left;
+  animation: upper-jaw .25s linear infinite alternate; }
+
+#PacMan {
+  transform-origin: center center;
+  transition: all .2s ease; }
+
+@keyframes lower-jaw {
+  50% {
+    transform: rotate(30deg); }
+  100% {
+    transform: rotate(0deg); } }
+@keyframes upper-jaw {
+  50% {
+    transform: rotate(-30deg); }
+  100% {
+    transform: rotate(0deg); } }
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25; }
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed; }
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em; }
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em; }
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center; }
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase; }
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0; }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em; }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right; }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase; }
+
+  table td:last-child {
+    border-bottom: 0; } }
+.follow {
+  position: fixed;
+  top: 60px;
+  margin-left: 120px; }
+
+* {
+  box-sizing: border-box; }
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1; }
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none; }
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px; }
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9; }
+
+button:hover {
+  opacity: 1; }
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336; }
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%; }
+
+/* Add padding to container elements */
+.container {
+  padding: 16px; }
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%; } }
